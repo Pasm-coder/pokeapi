@@ -1,0 +1,20 @@
+<body>
+
+    <div>
+      <input type="button"  href="" class="button1 buttons" routerLink="/list">
+      <input type="button"  href="pokemonlist" class="button2 buttons" routerLink="/my_team">
+      <input type="button"  href="pokemonlist" class="button3 buttons" routerLink="">
+    </div>
+      
+      <div #asgalery id="galery" class="pokemon-grid" >
+        <div id="{{pokemon.name}}" class="box"
+        *ngFor="let pokemon of pokemons  "> 
+          <img [src]="pokemon.img" alt="Pokemon" class="img">
+          <h3 class="card_name " >{{pokemon.name}}</h3>
+          <p class="type">{{pokemon.types}}</p>
+          <p class="height">Height: {{pokemon.height}}</p>       
+          <p class="health">Health: {{pokemon.health}}</p>      
+          <p class="power">Attack-Power: {{pokemon.atack}}</p>
+        </div>
+      
+      </div>
